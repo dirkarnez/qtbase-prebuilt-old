@@ -44,6 +44,7 @@ jobs:
         shell: cmd
         run: |
             set PATH=^
+            C:\Windows\System32\WindowsPowerShell\v1.0;^
             ${{ github.workspace }}\mingw64;^
             ${{ github.workspace }}\mingw64\bin;^
             ${{ github.workspace }}\cmake-3.24.0-windows-x86_64\bin;^
