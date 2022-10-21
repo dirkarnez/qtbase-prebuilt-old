@@ -52,7 +52,7 @@ jobs:
             ${{ github.workspace }}\strawberry-perl-5.32.1.1-64bit-portable;^
             ${{ github.workspace }}\python-3.10.8-amd64-portable;
             gcc --version &&^
-            cd mbedtls &&^
+            cd qtbase &&^
             cmake.exe -G "MinGW Makefiles" ^
             -DCMAKE_BUILD_TYPE=Release ^
             -DBUILD_SHARED_LIBS=OFF ^
@@ -63,12 +63,12 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          directory: "mbedtls/cmake-build/${{ env.cmakeInstallationPath }}"
+          directory: "qtbase/cmake-build/${{ env.cmakeInstallationPath }}"
           filename: "${{ env.mingwTargetZip }}"
           
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "mbedtls/cmake-build/${{ env.cmakeInstallationPath }}/${{ env.mingwTargetZip }}"
+          artifacts: "qtbase/cmake-build/${{ env.cmakeInstallationPath }}/${{ env.mingwTargetZip }}"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
