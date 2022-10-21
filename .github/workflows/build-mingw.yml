@@ -50,7 +50,7 @@ jobs:
             ${{ github.workspace }}\cmake-3.24.0-windows-x86_64\bin;^
             ${{ github.workspace }}\PortableGit-2.38.1-64-bit;^
             ${{ github.workspace }}\PortableGit-2.38.1-64-bit\bin;^
-            ${{ github.workspace }}\strawberry-perl-5.32.1.1-64bit-portable;^
+            ${{ github.workspace }}\strawberry-perl-5.32.1.1-64bit-portable\perl\bin;^
             ${{ github.workspace }}\python-3.10.8-amd64-portable;
             gcc --version &&^
             cd qtbase &&^
